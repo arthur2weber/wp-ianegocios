@@ -1,0 +1,43 @@
+[0419/113403.186:INFO:CONSOLE(1)] "Uncaught ReferenceError: start is not defined", source: file:///C:/Program%20Files%20(x86)/Google/Chrome/Application/80.0.3987.163/ (1)
+[0419/113403.186:INFO:CONSOLE(2)] "Uncaught ReferenceError: onHasParentDirectory is not defined", source: file:///C:/Program%20Files%20(x86)/Google/Chrome/Application/80.0.3987.163/ (2)
+[0419/113403.186:INFO:CONSOLE(3)] "Uncaught ReferenceError: addRow is not defined", source: file:///C:/Program%20Files%20(x86)/Google/Chrome/Application/80.0.3987.163/ (3)
+[0419/113403.186:INFO:CONSOLE(4)] "Uncaught ReferenceError: addRow is not defined", source: file:///C:/Program%20Files%20(x86)/Google/Chrome/Application/80.0.3987.163/ (4)
+[0419/113403.187:INFO:CONSOLE(5)] "Uncaught ReferenceError: addRow is not defined", source: file:///C:/Program%20Files%20(x86)/Google/Chrome/Application/80.0.3987.163/ (5)
+[0419/113403.187:INFO:CONSOLE(6)] "Uncaught ReferenceError: addRow is not defined", source: file:///C:/Program%20Files%20(x86)/Google/Chrome/Application/80.0.3987.163/ (6)
+[0419/113403.187:INFO:CONSOLE(7)] "Uncaught ReferenceError: addRow is not defined", source: file:///C:/Program%20Files%20(x86)/Google/Chrome/Application/80.0.3987.163/ (7)
+[0419/113403.187:INFO:CONSOLE(8)] "Uncaught ReferenceError: addRow is not defined", source: file:///C:/Program%20Files%20(x86)/Google/Chrome/Application/80.0.3987.163/ (8)
+[0419/113403.187:INFO:CONSOLE(9)] "Uncaught ReferenceError: addRow is not defined", source: file:///C:/Program%20Files%20(x86)/Google/Chrome/Application/80.0.3987.163/ (9)
+[0419/113403.187:INFO:CONSOLE(10)] "Uncaught ReferenceError: addRow is not defined", source: file:///C:/Program%20Files%20(x86)/Google/Chrome/Application/80.0.3987.163/ (10)
+[0419/113403.187:INFO:CONSOLE(11)] "Uncaught ReferenceError: addRow is not defined", source: file:///C:/Program%20Files%20(x86)/Google/Chrome/Application/80.0.3987.163/ (11)
+[0419/113403.188:INFO:CONSOLE(12)] "Uncaught ReferenceError: addRow is not defined", source: file:///C:/Program%20Files%20(x86)/Google/Chrome/Application/80.0.3987.163/ (12)
+[0419/113403.188:INFO:CONSOLE(13)] "Uncaught ReferenceError: addRow is not defined", source: file:///C:/Program%20Files%20(x86)/Google/Chrome/Application/80.0.3987.163/ (13)
+[0419/113403.188:INFO:CONSOLE(14)] "Uncaught ReferenceError: addRow is not defined", source: file:///C:/Program%20Files%20(x86)/Google/Chrome/Application/80.0.3987.163/ (14)
+[0419/113403.188:INFO:CONSOLE(15)] "Uncaught ReferenceError: addRow is not defined", source: file:///C:/Program%20Files%20(x86)/Google/Chrome/Application/80.0.3987.163/ (15)
+[0419/113403.188:INFO:CONSOLE(16)] "Uncaught ReferenceError: addRow is not defined", source: file:///C:/Program%20Files%20(x86)/Google/Chrome/Application/80.0.3987.163/ (16)
+[0419/113403.188:INFO:CONSOLE(17)] "Uncaught ReferenceError: addRow is not defined", source: file:///C:/Program%20Files%20(x86)/Google/Chrome/Application/80.0.3987.163/ (17)
+[0419/113403.188:INFO:CONSOLE(18)] "Uncaught ReferenceError: addRow is not defined", source: file:///C:/Program%20Files%20(x86)/Google/Chrome/Application/80.0.3987.163/ (18)
+[0419/113403.189:INFO:CONSOLE(19)] "Uncaught ReferenceError: addRow is not defined", source: file:///C:/Program%20Files%20(x86)/Google/Chrome/Application/80.0.3987.163/ (19)
+[0419/113403.189:INFO:CONSOLE(20)] "Uncaught ReferenceError: addRow is not defined", source: file:///C:/Program%20Files%20(x86)/Google/Chrome/Application/80.0.3987.163/ (20)
+[0419/113403.189:INFO:CONSOLE(21)] "Uncaught ReferenceError: addRow is not defined", source: file:///C:/Program%20Files%20(x86)/Google/Chrome/Application/80.0.3987.163/ (21)
+[0419/113403.189:INFO:CONSOLE(22)] "Uncaught ReferenceError: addRow is not defined", source: file:///C:/Program%20Files%20(x86)/Google/Chrome/Application/80.0.3987.163/ (22)
+[0419/113403.189:INFO:CONSOLE(23)] "Uncaught ReferenceError: addRow is not defined", source: file:///C:/Program%20Files%20(x86)/Google/Chrome/Application/80.0.3987.163/ (23)
+[0419/113403.189:INFO:CONSOLE(24)] "Uncaught ReferenceError: addRow is not defined", source: file:///C:/Program%20Files%20(x86)/Google/Chrome/Application/80.0.3987.163/ (24)
+[0419/113403.189:INFO:CONSOLE(25)] "Uncaught ReferenceError: addRow is not defined", source: file:///C:/Program%20Files%20(x86)/Google/Chrome/Application/80.0.3987.163/ (25)
+[0419/113403.190:INFO:CONSOLE(26)] "Uncaught ReferenceError: addRow is not defined", source: file:///C:/Program%20Files%20(x86)/Google/Chrome/Application/80.0.3987.163/ (26)
+[0419/113403.190:INFO:CONSOLE(27)] "Uncaught ReferenceError: addRow is not defined", source: file:///C:/Program%20Files%20(x86)/Google/Chrome/Application/80.0.3987.163/ (27)
+[0419/113403.190:INFO:CONSOLE(28)] "Uncaught ReferenceError: addRow is not defined", source: file:///C:/Program%20Files%20(x86)/Google/Chrome/Application/80.0.3987.163/ (28)
+[0419/113420.458:INFO:CONSOLE(1)] "Application Cache API use is deprecated and will be removed in M82, around April 2020. See https://www.chromestatus.com/features/6192449487634432 for more details.", source: https://web.whatsapp.com/app.ca7f73985b45fbf63033.js (1)
+[0419/114229.471:INFO:CONSOLE(1)] "WebSocket connection to 'wss://web.whatsapp.com/ws' failed: Error in connection establishment: net::ERR_NETWORK_IO_SUSPENDED", source: https://web.whatsapp.com/app.ca7f73985b45fbf63033.js (1)
+[0419/114229.705:INFO:CONSOLE(1)] "WebSocket connection to 'wss://web.whatsapp.com/ws' failed: Error in connection establishment: net::ERR_NETWORK_IO_SUSPENDED", source: https://web.whatsapp.com/app.ca7f73985b45fbf63033.js (1)
+[0419/114236.253:INFO:CONSOLE(1)] "WebSocket connection to 'wss://web.whatsapp.com/ws' failed: Error in connection establishment: net::ERR_NETWORK_IO_SUSPENDED", source: https://web.whatsapp.com/app.ca7f73985b45fbf63033.js (1)
+[0419/151714.557:INFO:CONSOLE(1)] "WebSocket connection to 'wss://web.whatsapp.com/ws' failed: Error in connection establishment: net::ERR_NETWORK_IO_SUSPENDED", source: https://web.whatsapp.com/app.ca7f73985b45fbf63033.js (1)
+[0419/151716.249:WARNING:dns_config_service_win.cc(672)] Failed to read DnsConfig.
+[0419/151716.890:INFO:CONSOLE(1)] "WebSocket connection to 'wss://web.whatsapp.com/ws' failed: Error in connection establishment: net::ERR_NETWORK_IO_SUSPENDED", source: https://web.whatsapp.com/app.ca7f73985b45fbf63033.js (1)
+[0419/151723.143:WARNING:dns_config_service_win.cc(672)] Failed to read DnsConfig.
+[0419/151723.481:WARNING:dns_config_service_win.cc(672)] Failed to read DnsConfig.
+[0419/151723.780:WARNING:dns_config_service_win.cc(672)] Failed to read DnsConfig.
+[0419/151723.796:WARNING:dns_config_service_win.cc(672)] Failed to read DnsConfig.
+[0419/151723.812:WARNING:dns_config_service_win.cc(672)] Failed to read DnsConfig.
+[0419/151723.866:WARNING:dns_config_service_win.cc(672)] Failed to read DnsConfig.
+[0419/151734.710:INFO:CONSOLE(1)] "WebSocket connection to 'wss://web.whatsapp.com/ws' failed: WebSocket is closed before the connection is established.", source: https://web.whatsapp.com/app.ca7f73985b45fbf63033.js (1)
+[0419/151734.710:INFO:CONSOLE(1)] "WebSocket connection to 'wss://web.whatsapp.com/ws' failed: WebSocket is closed before the connection is established.", source: https://web.whatsapp.com/app.ca7f73985b45fbf63033.js (1)
