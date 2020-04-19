@@ -19,7 +19,6 @@ function start(client) {
 	  'Boa noite' : // if for some reason the calculation didn't work
 	  'Olá'
 
-	console.log(greetingMessage)
 		client.sendText(greetingMessage+' '+message.sender.pushname+'! somos a Lalala Lanches, Acesse no link a seguir nosso sistema de pedidos: https://gg.gg/Lalala_pedidos');
     }	
   });
