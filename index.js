@@ -18,8 +18,8 @@ function start(client) {
 	  currentHour > 18 || currentHour < 5 ? // after 5:59pm or before 4:00AM (to accommodate night owls)
 	  'Boa noite' : // if for some reason the calculation didn't work
 	  'Olá'
-
-		client.sendText(greetingMessage+' '+message.sender.pushname+'! somos a Lalala Lanches, Acesse no link a seguir nosso sistema de pedidos: https://gg.gg/Lalala_pedidos');
+		
+		client.sendText(message.from,greetingMessage+' '+message.sender.pushname+'! somos a Fit Fat Food, nesse período de quarentena 😷 estamos atendendo apenas para entregas 🛵, Clique no link para fazer seu pedidos: https://gg.gg/Lalala_pedidos 👈');
     }	
   });
 }
