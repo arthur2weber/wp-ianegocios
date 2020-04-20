@@ -1,8 +1,37 @@
 //import { create, Whatsapp } from 'sulla';
 const create = require("sulla").create;
 const Whatsapp = require("sulla").Whatsapp;
-create().then(client => start(client));
+const fs = require('fs');
 
+const express = require('express')
+const path = require('path')
+const PORT = process.env.PORT || 5000
+
+express()
+  .use(express.static(path.join(__dirname, 'public')))
+  .set('views', path.join(__dirname, 'views'))
+  .set('view engine', 'ejs')
+  .get('/', (req, res) => res.render('pages/index'))
+  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
+
+
+
+
+// Writes QR in specified path
+function exportQR(qrCode, path) {
+  qrCode = qrCode.replace('data:image/png;base64,', '');
+  const imageBuffer = Buffer.from(qrCode, 'base64');
+
+  // Creates 'marketing-qr.png' file
+  fs.writeFileSync(path, imageBuffer);
+}
+
+create('session/48996965191', (base64Qr, asciiQR) => {
+  // To log the QR in the terminal
+  console.log(asciiQR);
+  // To write it somewhere else in a file
+  exportQR(base64Qr, 'public/qr.png');
+}).then(client => start(client));
 
 function start(client) {
   client.onMessage(message => {
@@ -19,7 +48,15 @@ function start(client) {
 	  'Boa noite' : // if for some reason the calculation didn't work
 	  'Olá'
 		
-		client.sendText(message.from,greetingMessage+' '+message.sender.pushname+'! somos a Fit Fat Food, nesse período de quarentena 😷 estamos atendendo apenas para entregas 🛵, Clique no link para fazer seu pedidos: https://gg.gg/Lalala_pedidos 👈');
+		client.sendText(message.from,greetingMessage+' '+message.sender.pushname+'!');
+		//client.sendText(message.from,greetingMessage+' '+message.sender.pushname+'! somos a Fit Fat Food, nesse período de quarentena 😷 estamos atendendo apenas para entregas 🛵, Clique no link para fazer seu pedidos: https://gg.gg/Lalala_pedidos 👈');
     }	
   });
+  
+  client.onStateChange(state => {
+  
+	
+  
+  });
+  
 }

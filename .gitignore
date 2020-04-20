@@ -11,3 +11,5 @@ session
 # Docker
 Dockerfile
 docker-compose.yml
+public/qr.png
+*.log
