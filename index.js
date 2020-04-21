@@ -9,7 +9,7 @@ express()
   .get('/', (req, res) => res.render('pages/index'))
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
-  /*
+
 const create = require("sulla").create;
 const Whatsapp = require("sulla").Whatsapp;
 const fs = require('fs');
@@ -52,4 +52,3 @@ function start(client) {
   });
   
 }
-*/
