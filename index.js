@@ -1,8 +1,3 @@
-//import { create, Whatsapp } from 'sulla';
-const create = require("sulla").create;
-const Whatsapp = require("sulla").Whatsapp;
-const fs = require('fs');
-
 const express = require('express')
 const path = require('path')
 const PORT = process.env.PORT || 5000
@@ -15,6 +10,9 @@ express()
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
 
+const create = require("sulla").create;
+const Whatsapp = require("sulla").Whatsapp;
+const fs = require('fs');
 
 
 // Writes QR in specified path
@@ -51,12 +49,6 @@ function start(client) {
 		client.sendText(message.from,greetingMessage+' '+message.sender.pushname+'!');
 		//client.sendText(message.from,greetingMessage+' '+message.sender.pushname+'! somos a Fit Fat Food, nesse período de quarentena 😷 estamos atendendo apenas para entregas 🛵, Clique no link para fazer seu pedidos: https://gg.gg/Lalala_pedidos 👈');
     }	
-  });
-  
-  client.onStateChange(state => {
-  
-	
-  
   });
   
 }
