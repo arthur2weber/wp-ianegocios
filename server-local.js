@@ -1,15 +1,10 @@
-const express = require('express')
-const path = require('path')
-const PORT = process.env.PORT || 5000
+'use strict';
 
-express()
-  .use(express.static(path.join(__dirname, 'public')))
-  .set('views', path.join(__dirname, 'views'))
-  .set('view engine', 'ejs')
-  .get('/', (req, res) => res.render('index'))
-  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
+const app = require('./express/server');
+app.listen(3000, () => console.log('Local app listening on port 3000!'));
 
-
+ ///////////////////////////////////////////
+  
 const create = require("sulla").create;
 const Whatsapp = require("sulla").Whatsapp;
 const fs = require('fs');

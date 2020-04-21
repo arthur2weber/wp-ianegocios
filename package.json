@@ -1,34 +1,37 @@
 {
-  "name": "node-js-getting-started",
-  "version": "0.3.0",
-  "description": "A sample Node.js app using Express 4",
-  "engines": {
-    "node": "12.x"
-  },
-  "main": "index.js",
+  "name": "netlify-express",
+  "version": "0.0.1",
+  "description": "Example of how to deploy a Express.js Netlify app.",
+  "main": "functions/server.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "node test.js"
-  },
-  "dependencies": {
-    "ejs": "^2.5.6",
-    "express": "^4.15.2",
-    "sulla": "^2.3.14"
-  },
-  "devDependencies": {
-    "request": "^2.81.0",
-    "tape": "^4.7.0"
+    "build": "netlify-lambda build express",
+    "start": "nodemon server-local.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/heroku/node-js-getting-started"
+    "url": "git+https://github.com/neverendingqs/netlify-express.git"
   },
   "keywords": [
-    "node",
-    "heroku",
-    "express"
+    "netlify",
+    "express.js"
   ],
-  "license": "MIT",
+  "author": "neverendingqs",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/neverendingqs/netlify-express/issues"
+  },
+  "homepage": "https://github.com/neverendingqs/netlify-express#readme",
+  "dependencies": {
+    "sulla": "^2.3.14"
+  },
+  "devDependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "netlify-lambda": "^1.6.3",
+    "nodemon": "^1.19.2",
+    "serverless-http": "^2.3.0",
+    "sulla": "^2.3.14"
+  },
   "sulla": {
     "version": "2.3.14",
     "resolved": "https://registry.npmjs.org/sulla/-/sulla-2.3.14.tgz",
