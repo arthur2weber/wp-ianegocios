@@ -1,27 +1,17 @@
-'use strict';
-
 const express = require('express');
-const path = require('path');
-const serverless = require('serverless-http');
 const app = express();
-const bodyParser = require('body-parser');
+const serverless = require('serverless-http');
+const path = require('path');
 
-const router = express.Router();
-
-router.get('/', (req, res) => {
-  res.writeHead(200, { 'Content-Type': 'text/html' });
-  res.write('<br><div style="text-align:center"><img src="/qr" /></div><meta http-equiv="refresh" content="3">');
-  res.end();
+app.get('/', function (req, res) {
+  res.send('<br><div style="text-align:center"><img src="/qr" /></div><meta http-equiv="refresh" content="3">');
 });
-router.get('/another', (req, res) => res.json({ route: req.originalUrl }));
-router.post('/', (req, res) => res.json({ postBody: req.body }));
 
-app.use(bodyParser.json());
 app.use('/qr', (req, res) => res.sendFile(path.join(__dirname, 'qr.png')));
-app.use('/.netlify/functions/server', router);  // path must route to lambda
-app.use('/', (req, res) => res.sendFile(path.join(__dirname,  'index.html')));
 
-
+app.listen(3000, function () {
+  console.log('Example app listening on port 3000!');
+});
 
 
 module.exports = app;
@@ -71,3 +61,4 @@ function start(client) {
     }	
   }); 
 }
+
