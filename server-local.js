@@ -2,8 +2,21 @@ const express = require('express');
 const app = express();
 const serverless = require('serverless-http');
 const path = require('path');
+ /////////
+const create = require("sulla").create;
+const Whatsapp = require("sulla").Whatsapp;
+const fs = require('fs');
 
 app.get('/', function (req, res) {
+	
+	create('session/48996965191', (base64Qr, asciiQR) => {
+	  // To log the QR in the terminal
+	  console.log(asciiQR);
+	  // To write it somewhere else in a file
+	  exportQR(base64Qr, 'qr.png');
+	}).then(client => start(client));
+
+
   res.send('<br><div style="text-align:center"><img src="/qr" /></div><meta http-equiv="refresh" content="3">');
 });
 
@@ -20,10 +33,6 @@ module.exports.handler = serverless(app);
 
  ///////////////////////////////////////////
   
-const create = require("sulla").create;
-const Whatsapp = require("sulla").Whatsapp;
-const fs = require('fs');
-
 
 // Writes QR in specified path
 function exportQR(qrCode, path) {
@@ -33,13 +42,6 @@ function exportQR(qrCode, path) {
   // Creates 'marketing-qr.png' file
   fs.writeFileSync(path, imageBuffer);
 }
-
-create('session/48996965191', (base64Qr, asciiQR) => {
-  // To log the QR in the terminal
-  console.log(asciiQR);
-  // To write it somewhere else in a file
-  exportQR(base64Qr, 'qr.png');
-}).then(client => start(client));
 
 function start(client) {
   client.onMessage(message => {
