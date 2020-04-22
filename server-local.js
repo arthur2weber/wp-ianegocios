@@ -1,7 +1,32 @@
 'use strict';
 
-const app = require('./express/server');
-app.listen(3000, () => console.log('Local app listening on port 3000!'));
+const express = require('express');
+const path = require('path');
+const serverless = require('serverless-http');
+const app = express();
+const bodyParser = require('body-parser');
+
+const router = express.Router();
+
+router.get('/', (req, res) => {
+  res.writeHead(200, { 'Content-Type': 'text/html' });
+  res.write('<br><div style="text-align:center"><img src="/qr" /></div><meta http-equiv="refresh" content="3">');
+  res.end();
+});
+router.get('/another', (req, res) => res.json({ route: req.originalUrl }));
+router.post('/', (req, res) => res.json({ postBody: req.body }));
+
+app.use(bodyParser.json());
+app.use('/qr', (req, res) => res.sendFile(path.join(__dirname, 'qr.png')));
+app.use('/.netlify/functions/server', router);  // path must route to lambda
+app.use('/', (req, res) => res.sendFile(path.join(__dirname,  'index.html')));
+
+
+
+
+module.exports = app;
+module.exports.handler = serverless(app);
+
 
  ///////////////////////////////////////////
   
@@ -23,7 +48,7 @@ create('session/48996965191', (base64Qr, asciiQR) => {
   // To log the QR in the terminal
   console.log(asciiQR);
   // To write it somewhere else in a file
-  exportQR(base64Qr, 'public/qr.png');
+  exportQR(base64Qr, 'qr.png');
 }).then(client => start(client));
 
 function start(client) {
@@ -44,6 +69,5 @@ function start(client) {
 		client.sendText(message.from,greetingMessage+' '+message.sender.pushname+'!');
 		//client.sendText(message.from,greetingMessage+' '+message.sender.pushname+'! somos a Fit Fat Food, nesse período de quarentena 😷 estamos atendendo apenas para entregas 🛵, Clique no link para fazer seu pedidos: https://gg.gg/Lalala_pedidos 👈');
     }	
-  });
-  
+  }); 
 }
