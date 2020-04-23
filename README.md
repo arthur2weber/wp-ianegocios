@@ -1,22 +1,23 @@
-# Express.js on Netlify Example
+# Simple Node with Express Server
 
-[![Netlify
-Status](https://api.netlify.com/api/v1/badges/9aaef7de-1e5d-4fda-bc39-faa10a68b35b/deploy-status)](https://app.netlify.com/sites/netlify-express/deploys)
+[![Build Status](https://travis-ci.org/rwieruch/node-express-server.svg?branch=master)](https://travis-ci.org/rwieruch/node-express-server) [![Slack](https://slack-the-road-to-learn-react.wieruch.com/badge.svg)](https://slack-the-road-to-learn-react.wieruch.com/) [![Greenkeeper badge](https://badges.greenkeeper.io/rwieruch/node-express-server.svg)](https://greenkeeper.io/)
 
-[![Deploy to
-Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/neverendingqs/netlify-express)
+An easy way to get started with a Express server with Node.js.
 
-An example of how to host an Express.js app on Netlify using
-[serverless-http](https://github.com/dougmoscrop/serverless-http). See
-[express/server.js](express/server.js) for details, or check it out at
-https://netlify-express.netlify.com/!
+## Features
 
-[index.html](index.html) simply loads html from the Express.js app using
-`<object>`, and the app is hosted at `/.netlify/functions/server`. Examples of
-how to access the Express.js endpoints:
+* Babel 7
+* Environment Variables
+* Express
 
-```sh
-curl https://netlify-express.netlify.com/.netlify/functions/server
-curl https://netlify-express.netlify.com/.netlify/functions/server/another
-curl --header "Content-Type: application/json" --request POST --data '{"json":"POST"}' https://netlify-express.netlify.com/.netlify/functions/server
-```
+## Requirements
+
+* [node & npm](https://nodejs.org/en/)
+* [git](https://www.robinwieruch.de/git-essential-commands/)
+
+## Installation
+
+* `git clone git@github.com:rwieruch/node-express-server.git`
+* `cd node-express-server`
+* `npm install`
+* `npm start`

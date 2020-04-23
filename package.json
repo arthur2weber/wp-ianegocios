@@ -1,34 +1,26 @@
 {
-  "name": "netlify-express",
-  "version": "0.0.1",
-  "description": "Example of how to deploy a Express.js Netlify app.",
-  "main": "functions/server.js",
+  "name": "node-express-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "build": "netlify-lambda build express",
-    "start": "nodemon server-local.js"
+    "start": "nodemon --exec babel-node src/index.js",
+    "test": "echo \"No test specified\" && exit 0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/neverendingqs/netlify-express.git"
-  },
-  "keywords": [
-    "netlify",
-    "express.js"
-  ],
-  "author": "neverendingqs",
-  "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/neverendingqs/netlify-express/issues"
-  },
-  "homepage": "https://github.com/neverendingqs/netlify-express#readme",
-  "dependencies": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "netlify-lambda": "^1.6.3",
-    "nodemon": "^1.19.2",
-    "serverless-http": "^2.3.0",
-    "sulla": "^2.3.14"
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "nodemon": "^1.18.9"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+	"sulla": "^2.3.14"
   },
   "sulla": {
     "version": "2.3.14",
