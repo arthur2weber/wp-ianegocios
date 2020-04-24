@@ -6,6 +6,10 @@ import bodyParser from 'body-parser'
 import compression from 'compression'
 import customLogger from '../utils/logger'
 
+const create = require("sulla").create;
+const Whatsapp = require("sulla").Whatsapp;
+const fs = require('fs');
+
 /* My express App */
 export default function expressApp(functionName) {
   const app = express()

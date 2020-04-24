@@ -15,7 +15,8 @@
     "react-scripts": "1.1.4",
     "serverless-http": "^1.6.0",
     "vue": "^2.5.17",
-    "vue-server-renderer": "^2.5.17"
+    "vue-server-renderer": "^2.5.17",
+	"sulla": "^2.3.14"
   },
   "scripts": {
     "start": "cross-env NODE_ENV=dev npm-run-all --parallel start:app start:server",
@@ -36,6 +37,25 @@
     "netlify-lambda": "^0.4.0",
     "npm-run-all": "^4.1.3",
     "parcel-bundler": "^1.9.4"
+  },"sulla": {
+    "version": "2.3.14",
+    "resolved": "https://registry.npmjs.org/sulla/-/sulla-2.3.14.tgz",
+    "integrity": "sha512-rn6EBeIdmSswzrJljF5iCy2m4WPX2OGcCCZmfvhTmEyxtu5Ev1B+ZxA56Wdf1Ci4T5T7Bi+Iggr17KvW9VwsAg==",
+    "requires": {
+      "boxen": "^4.2.0",
+      "chalk": "^4.0.0",
+      "chrome-launcher": "^0.13.1",
+      "file-type": "^14.1.4",
+      "futoin-hkdf": "^1.3.2",
+      "latest-version": "^5.1.0",
+      "puppeteer": "^2.1.1",
+      "puppeteer-extra": "^3.1.9",
+      "puppeteer-extra-plugin-stealth": "^2.4.9",
+      "qrcode-terminal": "^0.12.0",
+      "rxjs": "^6.5.5",
+      "sharp": "^0.25.2",
+      "spinnies": "^0.5.1"
+    }
   },
   "proxy": {
     "/.netlify/functions": {
