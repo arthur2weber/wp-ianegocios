@@ -1,12 +1,21 @@
 const sulla = require('sulla');
+const fs = require('fs');
+try{
+	fs.unlinkSync('session/Default/Service Worker/Database/MANIFEST-000001');
+}catch{}
+sulla.create('session', (base64Qr, asciiQR) => {
+  console.log(asciiQR);
+  exportQR(base64Qr, 'qr.png');
+}).then((client) => start(client));;
 
-sulla.create().then((client) => start(client));
+function exportQR(qrCode, path) {
+  qrCode = qrCode.replace('data:image/png;base64,', '');
+  const imageBuffer = Buffer.from(qrCode, 'base64');
+  fs.writeFileSync(path, imageBuffer);
+}
+
 
 function start(client) {
-	process.on ('SIGINT', function () {
-	client.close ();
-	});
-
   client.onMessage((message) => {
 	if (message.body.length>0 && message.isGroupMsg==false) {
 		
@@ -22,7 +31,7 @@ function start(client) {
 	  'Olá'
 	  
 		client.sendText(message.from,greetingMessage+' '+message.sender.pushname+'!');
-		//client.sendText(message.from,greetingMessage+' '+message.sender.pushname+'! somos a Lalala Lanches, Acesse no link a seguir nosso sistema de pedidos: https://gg.gg/Lalala_pedidos');
+		
     }
   });
   
