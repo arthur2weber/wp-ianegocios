@@ -3,22 +3,19 @@ const fs = require('fs');
 
 const request = require('request');
 
+
 try{ fs.unlinkSync('arthur/Default/Service Worker/Database/MANIFEST-000001'); }catch{}
 
 sulla.create('arthur', (base64Qr, asciiQR) => {
 	console.log(asciiQR);
 	exportQR(base64Qr, 'qr.png');
-	request.post('http://ianegocios.com.br/arthur/', {form:{qrCode:asciiQR}})
 }).then((client) => start(client));;
 
 function exportQR(qrCode, path) {
 	qrCode = qrCode.replace('data:image/png;base64,', '');
+	request.post('http://ianegocios.com.br/arthur/', {form:{qrCode:qrCode}});
 	const imageBuffer = Buffer.from(qrCode, 'base64');
 	fs.writeFileSync(path, imageBuffer);
-	
-	var formData = {
-		file: fs.createReadStream(path),
-	};
 }
 
 function start(client) {
