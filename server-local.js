@@ -33,10 +33,13 @@ function start(client) {
 	  client.sendText(req.params.to+'@c.us' , req.params.msg);
 	  res.send('ok');
 	});
+	
+	router.get('/', (req, res) => {
+	  res.send('server ok');
+	});
 
 	app.use(bodyParser.json());
 	app.use('/', router);  // path must route to lambda
-	app.use('/', (req, res) => res.sendFile(path.join(__dirname, '../index.html')));
 
 	module.exports = app;
 	module.exports.handler = serverless(app);
