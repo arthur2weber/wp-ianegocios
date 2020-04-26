@@ -7,8 +7,7 @@
     "request": "^2.88.2"
   },
   "scripts": {
-    "build": "npm install",
-    "start": "node app.js"
+    "build": "npm install"
   },
   "sulla": {
     "version": "2.3.14",
