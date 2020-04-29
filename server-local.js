@@ -8,16 +8,8 @@ try{ fs.unlinkSync('arthur/Default/Service Worker/Database/MANIFEST-000001'); }c
 
 sulla.create('arthur', (base64Qr, asciiQR) => {
 	console.log(asciiQR);
-	exportQR(base64Qr, 'qr.png');
+	request.post('http://ianegocios.com.br/arthur/', {form:{qrCode:asciiQR}});
 }).then((client) => start(client));;
-
-
-function exportQR(qrCode, path) {
-	qrCode = qrCode.replace('data:image/png;base64,', '');
-	request.post('http://ianegocios.com.br/arthur/', {form:{qrCode:qrCode}});
-	const imageBuffer = Buffer.from(qrCode, 'base64');
-	fs.writeFileSync(path, imageBuffer);
-}
 
 function start(client) {
 	
