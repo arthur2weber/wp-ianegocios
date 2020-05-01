@@ -1,37 +1,18 @@
 {
-  "name": "netlify-express",
-  "version": "0.0.1",
-  "description": "Example of how to deploy a Express.js Netlify app.",
-  "main": "functions/server.js",
+  "name": "node-umbler",
+  "version": "1.0.0",
+  "description": "App simples para testar a hospedagem da Umbler.",
+  "main": "index.js",
   "scripts": {
-    "build": "netlify-lambda build ./",
-    "start": "nodemon server-local.js"
+    "start": "node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/neverendingqs/netlify-express.git"
-  },
-  "keywords": [
-    "netlify",
-    "express.js"
-  ],
-  "author": "neverendingqs",
-  "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/neverendingqs/netlify-express/issues"
-  },
-  "homepage": "https://github.com/neverendingqs/netlify-express#readme",
+  "author": "Henrique Schreiner",
+  "license": "MIT",
   "dependencies": {
     "sulla": "^2.3.14",
-    "request": "^2.88.2"
-  },
-  "devDependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "netlify-lambda": "^1.6.3",
-    "nodemon": "^1.19.2",
-    "serverless-http": "^2.3.0"
-  },
+    "request": "^2.88.0",
+    "express": "^4.16.2"
+  },	
   "sulla": {
     "version": "2.3.14",
     "resolved": "https://registry.npmjs.org/sulla/-/sulla-2.3.13.tgz",
