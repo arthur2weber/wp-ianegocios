@@ -15,7 +15,6 @@ function start(client) {
 	
 	const express = require('express');
 	const path = require('path');
-	const serverless = require('serverless-http');
 	const app = express();
 	const bodyParser = require('body-parser');
 
@@ -34,8 +33,6 @@ function start(client) {
 	app.use('/', router);  // path must route to lambda
 	app.use('/', (req, res) => res.sendFile(path.join(__dirname, 'index.html')));
 
-	module.exports = app;
-	module.exports.handler = serverless(app);
 	app.listen(3000, () => console.log('Local app listening on port 3000!'));
 
 	///////////////////////////////////////////////////////////////////////////////////////////
